@@ -1,0 +1,17 @@
+<br/>
+<div data-ng-show='!authenticated'>Please log in to see directory files</div>
+<div data-ng-show='authenticated'>
+<form role="form" ng-submit="file()" >
+	<div class="form-group">
+		<label for="directory">Enter a Directory Path:</label> <input type="text"
+			class="form-control" id="directory"  ng-model="directory"/>
+	</div>
+	<button type="submit">Submit</button>
+	 <br><i>e.g. c:/directory/path</i>
+</form>
+<br/>
+Files:
+	<ul>
+		<li ng-repeat="file in files">{{file}}</li>
+	</ul>
+</div>

@@ -1,0 +1,35 @@
+body {
+   
+    font: 13px/20px "Lucida Grande",Tahoma,Verdana,sans-serif;
+}
+body {
+    line-height: 1;
+}
+
+
+
+.sort-icon {
+    font-size: 9px;
+    margin-left: 5px;
+}
+
+table {
+ 	margin-left:auto;
+ 	margin-right:auto;
+ 	text-align:left;
+ 	border: 1px solid green;
+ 	
+}
+
+th {
+	cursor:pointer;
+	background-color: green;
+    color: white;
+}
+
+tr.alt td {
+    color: #000000;
+    background-color: #EAF2D3;
+}
+
+

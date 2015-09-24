@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="restApp">
+<head>
+<title data-ng-bind="'Securing REST API using Spring Security:' +$rootScope.title"></title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/login.css"/>
+		<script src="https://ajax.googleapis.com/ajax/lib/angular/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-sanitize.min.js" type="text/javascript"></script>
+         <script src="js/lib/ui-bootstrap-tpls-0.12.1.min.js" type="text/javascript"></script>
+        <script src="js/app/app.js"></script>
+        
+</head>
+
+<body data-ng-app="restApp" data-ng-controller="navigationController">
+	<div  class="container">
+		 <tabset>
+		 	<tab heading="Home"><a href="#/">Home |</a></tab>
+		 	<tab heading="User"><a href="#/user">Users |</a></tab>
+		 	<tab heading="File"><a href="#/file">Files |</a></tab>
+		 	<tab heading="Login" data-ng-hide='authenticated'><a href="#/login">Login</a></tab>
+		 	<tab heading="Logout" data-ng-show='authenticated' ><a href="" data-ng-click="logout()">Logout</a></tab>
+		 </tabset>
+	</div>
+	<div data-ng-view='true' class="view-container"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<br/>
+<div data-ng-show='!authenticated'>Please log in to see users</div>
+<div data-ng-show='authenticated'>
+<form class="form-inline" ng-submit="search()" role="form">
+         <div class="form-group">
+             <label >Enter Country Name:</label>
+             <input type="text" ng-model="country" class="form-control" placeholder="country">
+         </div>
+         <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div class="bs-component" ng-controller="userController">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Email</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Region</th>
+                                    <th>Country</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="user in users | filter:country" class="alt">
+                                    <td>{{user.id}}</td>
+                                    <td>{{user.userEmail}}</td>
+                                    <td>{{user.firstName}}</td>
+                                    <td>{{user.lastName}}</td>
+                                    <td>{{user.region}}</td>
+                                    <td>{{user.country}}</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+ </div>
+ </div>
+	
